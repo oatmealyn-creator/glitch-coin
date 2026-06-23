@@ -17,9 +17,43 @@
       <div class="mt-10 pt-8 border-t border-outline-variant/50">
         <p class="font-label text-xs tracking-widest font-semibold uppercase text-on-surface-variant">Total Staked</p>
         <p class="font-headline text-2xl sm:text-3xl font-extrabold text-tertiary-fixed mt-2">
-          <span class="inline-block motion-safe:animate-pulse">420,691,337</span> $GLITCH
+          <span id="ticker" class="inline-block">0</span> $GLITCH
         </p>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const tickerEl = document.getElementById('ticker');
+  if (tickerEl) {
+    const target = 420691337;
+    const startVal = Math.floor(target * 0.3);
+    let animated = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          const duration = 2500;
+          const startTime = performance.now();
+
+          function step(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(startVal + (target - startVal) * eased);
+            tickerEl.textContent = current.toLocaleString();
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            }
+          }
+          requestAnimationFrame(step);
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(tickerEl);
+  }
+</script>

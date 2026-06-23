@@ -60,27 +60,31 @@
 
 @utility clay-card {
   background-color: var(--color-surface-container-lowest);
-  box-shadow: 8px 16px 32px rgba(24, 25, 52, 0.05),
-    inset 2px 4px 8px rgba(255, 255, 255, 0.6),
-    inset -2px -4px 8px rgba(107, 56, 212, 0.05);
+  box-shadow:
+    12px 24px 48px rgba(24, 25, 52, 0.08),
+    inset 2px 4px 8px rgba(255, 255, 255, 0.7),
+    inset -3px -6px 12px rgba(107, 56, 212, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 @utility clay-btn-primary {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
-  box-shadow: 0px 8px 24px rgba(107, 56, 212, 0.3),
+  box-shadow:
+    0px 8px 24px rgba(107, 56, 212, 0.35),
     inset 2px 4px 8px rgba(255, 255, 255, 0.4),
     inset -2px -4px 8px rgba(35, 0, 92, 0.4);
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 @utility clay-btn-accent {
   background-color: var(--color-tertiary-fixed);
   color: var(--color-on-tertiary-fixed);
-  box-shadow: 0px 8px 24px rgba(38, 254, 220, 0.3),
+  box-shadow:
+    0px 8px 24px rgba(38, 254, 220, 0.35),
     inset 2px 4px 8px rgba(255, 255, 255, 0.6),
     inset -2px -4px 8px rgba(0, 104, 89, 0.2);
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 @layer base {
@@ -95,6 +99,10 @@
 
   h1, h2, h3 {
     text-wrap: balance;
+  }
+
+  p, li {
+    text-wrap: pretty;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -123,11 +131,6 @@
     animation: bob 3s ease-in-out infinite;
   }
 
-  @keyframes count-up {
-    from { --num: 0; }
-    to { --num: 100; }
-  }
-
   .timeline-line::before {
     content: '';
     position: absolute;
@@ -137,5 +140,64 @@
     width: 2px;
     background: linear-gradient(to bottom, var(--color-tertiary-fixed), var(--color-primary));
     opacity: 0.3;
+  }
+
+  .roadmap-line::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-tertiary-fixed));
+    opacity: 0.3;
+  }
+
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal {
+    opacity: 0;
+  }
+
+  .reveal.visible {
+    animation: reveal-up 0.6s ease-out both;
+  }
+
+  .reveal-delay-1 { animation-delay: 0.1s; }
+  .reveal-delay-2 { animation-delay: 0.2s; }
+  .reveal-delay-3 { animation-delay: 0.3s; }
+  .reveal-delay-4 { animation-delay: 0.4s; }
+
+  details.clay-faq {
+    transition: all 0.2s ease;
+  }
+
+  details.clay-faq[open] {
+    box-shadow:
+      12px 24px 48px rgba(24, 25, 52, 0.08),
+      inset 2px 4px 8px rgba(255, 255, 255, 0.7),
+      inset -3px -6px 12px rgba(107, 56, 212, 0.06);
+  }
+
+  details.clay-faq summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details.clay-faq summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .ticker-value {
+    transition: opacity 0.5s ease;
   }
 }
