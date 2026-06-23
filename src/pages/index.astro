@@ -2,16 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
-import Vision from '../components/Vision.astro';
+import StatBar from '../components/StatBar.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Features from '../components/Features.astro';
 import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
   <Nav />
-  <main class="flex-grow w-full relative">
+  <main>
     <Hero />
-    <Vision />
+    <StatBar />
+    <HowItWorks />
+    <Features />
     <CTA />
   </main>
   <Footer />

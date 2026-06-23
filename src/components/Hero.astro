@@ -1,37 +1,36 @@
-<section class="relative w-full min-h-[90vh] flex items-center justify-center pt-24 pb-[32px] px-[24px] overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-multiply" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbZ0euvxpMiTjvvZpYyLIKdMs2OTDPUpMR0Pj1fgj5UVN05S94BWu4oVhUqAjb1OzMYf9F59pYW5GUxwNanPvmAY_RxOV8-Q2eBDl8pMXZVlsy50W4PjHTRi4TqelL929iX7KgZ4kojmEU8uTsZ2d1UNUZz8ow1asO5yZLaWk1p4yyzQkQL7NKJvNSg4x3SwUgXiQdvWjxGNefHYgsVecheEk5istpA-mtFLbB-L-19PHFtJLPyzcQbyk8CwI7gk7hijd0dqEqhCs')"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background z-10"></div>
-  </div>
+<section class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 overflow-hidden">
+  <div class="grain absolute inset-0 z-0 pointer-events-none"></div>
 
-  <div class="relative z-20 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-[32px]">
-    <div class="flex-1 flex flex-col items-start gap-[16px] max-w-2xl">
-      <div class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label text-[12px] leading-[1] tracking-[0.05em] font-semibold uppercase inline-flex items-center gap-2 shadow-[0_0_15px_rgba(38,254,220,0.4)]">
-        <span class="w-2 h-2 rounded-full bg-on-tertiary-fixed motion-reduce:animate-none animate-pulse"></span>
-        Live on DexScreener
-      </div>
-
-      <h1 class="font-headline text-[28px] md:text-[48px] leading-[1.1] tracking-[-0.02em] font-extrabold text-primary-container drop-shadow-sm">
-        Digital Plasticity:<br>The Glitch Ecosystem.
-      </h1>
-
-      <p class="font-sans text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl">
-        The first cryptocurrency with a tactile soul. Experience the volatility of crypto smoothed out into soft, satisfying clay. Built for a community that values aesthetic as much as utility.
-      </p>
-
-      <div class="pt-[8px] flex flex-col sm:flex-row gap-[16px] w-full sm:w-auto">
-        <a href="#cta" class="clay-btn-accent px-8 py-4 rounded-xl font-headline text-[18px] leading-[1.6] font-bold w-full sm:w-auto flex justify-center items-center gap-2 transition-transform duration-300">
-          Trade Now
-          <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#vision" class="clay-card px-8 py-4 rounded-xl font-headline text-[18px] leading-[1.6] font-bold text-primary w-full sm:w-auto text-center hover:bg-surface-container-low transition-colors">
-          View Vision
-        </a>
-      </div>
+  <div class="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
+    <div class="inline-flex items-center gap-2 rounded-full bg-tertiary-fixed/20 border border-tertiary-fixed/30 px-4 py-1.5 mb-10">
+      <span class="h-2 w-2 rounded-full bg-tertiary-fixed motion-reduce:animate-none animate-pulse"></span>
+      <span class="font-label text-xs tracking-widest font-semibold uppercase text-tertiary-fixed">Live on DexScreener</span>
     </div>
 
-    <div class="flex-1 w-full max-w-md lg:max-w-xl relative">
-      <img alt="GLITCH Coin" class="w-full h-auto relative z-10 motion-reduce:transform-none hover:scale-105 transition-transform duration-700 ease-in-out cursor-pointer mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZpREYjRbIdrJs90xsWWEJuQ7JBNqXocTmZ4xIfN5AYzVZXJQG8qZVuPHJeFyfWd34_I6nBSvMlCgnu42rZUeHjNVgR75vXwiDKjp-c_o4m07V1teOL7yGS2_lq4UcT9rXMemmEKlnGFwprxFPWGEvzcxrLlz1enCyu7sxjGD0SHWbsqc3LfcOT_s8jCfP1bEUNELanScLEgO1uYw6NQHaSuzfvIy5GM-PvKCz8lU45OtSOdMF60gPEHPhAllIV0WH1z8SKA02AM" />
+    <div class="relative mb-10">
+      <img
+        alt="GLITCH Coin"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZpREYjRbIdrJs90xsWWEJuQ7JBNqXocTmZ4xIfN5AYzVZXJQG8qZVuPHJeFyfWd34_I6nBSvMlCgnu42rZUeHjNVgR75vXwiDKjp-c_o4m07V1teOL7yGS2_lq4UcT9rXMemmEKlnGFwprxFPWGEvzcxrLlz1enCyu7sxjGD0SHWbsqc3LfcOT_s8jCfP1bEUNELanScLEgO1uYw6NQHaSuzfvIy5GM-PvKCz8lU45OtSOdMF60gPEHPhAllIV0WH1z8SKA02AM"
+        class="w-48 h-48 sm:w-64 sm:h-64 object-contain motion-reduce:animate-none animate-bob mix-blend-multiply"
+      />
+    </div>
+
+    <h1 class="font-headline text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[1.05] text-on-surface max-w-3xl">
+      Digital <span class="text-primary">Plasticity</span>
+    </h1>
+
+    <p class="mt-5 text-lg sm:text-xl text-on-surface-variant max-w-xl">
+      The first cryptocurrency with a tactile soul. Volatility smoothed into soft, satisfying clay.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center gap-4">
+      <a href="#cta" class="clay-btn-primary px-8 py-4 rounded-[--radius-default] font-headline text-base font-bold flex items-center gap-2">
+        Buy $GLITCH
+        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+      </a>
+      <a href="#how" class="px-8 py-4 rounded-[--radius-default] font-headline text-base font-bold text-primary border border-primary/20 hover:bg-primary/5 transition-colors">
+        How It Works
+      </a>
     </div>
   </div>
 </section>

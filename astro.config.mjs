@@ -7,6 +7,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://glitch-coin.vercel.app',
+  base: '/',
   output: 'static',
 
   vite: {
