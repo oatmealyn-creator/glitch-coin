@@ -61,19 +61,19 @@
 @utility clay-card {
   background-color: var(--color-surface-container-lowest);
   box-shadow:
-    12px 24px 48px rgba(24, 25, 52, 0.08),
-    inset 2px 4px 8px rgba(255, 255, 255, 0.7),
-    inset -3px -6px 12px rgba(107, 56, 212, 0.06);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+    16px 32px 48px rgba(24, 25, 52, 0.1),
+    inset 2px 4px 8px rgba(255, 255, 255, 0.75),
+    inset -4px -8px 16px rgba(107, 56, 212, 0.08);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
 @utility clay-btn-primary {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
   box-shadow:
-    0px 8px 24px rgba(107, 56, 212, 0.35),
-    inset 2px 4px 8px rgba(255, 255, 255, 0.4),
-    inset -2px -4px 8px rgba(35, 0, 92, 0.4);
+    0px 12px 32px rgba(107, 56, 212, 0.4),
+    inset 2px 4px 12px rgba(255, 255, 255, 0.45),
+    inset -4px -6px 12px rgba(35, 0, 92, 0.5);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -81,9 +81,9 @@
   background-color: var(--color-tertiary-fixed);
   color: var(--color-on-tertiary-fixed);
   box-shadow:
-    0px 8px 24px rgba(38, 254, 220, 0.35),
-    inset 2px 4px 8px rgba(255, 255, 255, 0.6),
-    inset -2px -4px 8px rgba(0, 104, 89, 0.2);
+    0px 12px 32px rgba(38, 254, 220, 0.4),
+    inset 2px 4px 12px rgba(255, 255, 255, 0.65),
+    inset -4px -6px 12px rgba(0, 104, 89, 0.25);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -116,6 +116,32 @@
 }
 
 @layer utilities {
+  @media (hover: hover) {
+    .clay-card:hover {
+      box-shadow:
+        20px 40px 64px rgba(24, 25, 52, 0.14),
+        inset 1px 2px 4px rgba(255, 255, 255, 0.85),
+        inset -5px -10px 20px rgba(107, 56, 212, 0.1);
+      transform: translateY(-6px);
+    }
+
+    .clay-btn-primary:hover {
+      box-shadow:
+        0px 16px 40px rgba(107, 56, 212, 0.5),
+        inset 2px 4px 12px rgba(255, 255, 255, 0.5),
+        inset -4px -6px 12px rgba(35, 0, 92, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .clay-btn-accent:hover {
+      box-shadow:
+        0px 16px 40px rgba(38, 254, 220, 0.5),
+        inset 2px 4px 12px rgba(255, 255, 255, 0.7),
+        inset -4px -6px 12px rgba(0, 104, 89, 0.25);
+      transform: translateY(-3px);
+    }
+  }
+
   .grain {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     background-repeat: repeat;
