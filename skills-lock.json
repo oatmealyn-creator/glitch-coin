@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "chungus": {
+      "source": "oatmealyn-creator/chungus-skills",
+      "sourceType": "github",
+      "skillPath": "skills/chungus/SKILL.md",
+      "computedHash": "3be5aa3f3037b2d9c1d39891326b0eeee52970423b397dbd1379c65d7d13dd33"
+    }
+  }
+}
