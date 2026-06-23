@@ -4,14 +4,14 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
-  image?: string;
 }
 
 const {
   title = 'GLITCH — Digital Plasticity',
   description = 'GLITCH is a meme coin with a tactile soul. Or at least, that\'s the idea. GLITCH vibes only.',
-  image = '/og-image.png',
 } = Astro.props;
+
+const coinImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZpREYjRbIdrJs90xsWWEJuQ7JBNqXocTmZ4xIfN5AYzVZXJQG8qZVuPHJeFyfWd34_I6nBSvMlCgnu42rZUeHjNVgR75vXwiDKjp-c_o4m07V1teOL7yGS2_lq4UcT9rXMemmEKlnGFwprxFPWGEvzcxrLlz1enCyu7sxjGD0SHWbsqc3LfcOT_s8jCfP1bEUNELanScLEgO1uYw6NQHaSuzfvIy5GM-PvKCz8lU45OtSOdMF60gPEHPhAllIV0WH1z8SKA02AM';
 ---
 
 <!doctype html>
@@ -26,15 +26,14 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={coinImage} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={coinImage} />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/glitch-coin.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
